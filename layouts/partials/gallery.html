@@ -1,0 +1,11 @@
+<section id="two">
+	<div class="row">
+    {{ range .Params.gallery }}
+		<article class="6u 12u$(xsmall) work-item">
+			<a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb">
+          <img src="{{ $.Site.BaseURL }}images/{{ .image }}" alt="" />
+      </a>
+		</article>
+		{{ end }}
+	</div>
+</section>

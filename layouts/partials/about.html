@@ -1,0 +1,11 @@
+<section id="about">
+	<header class="major">
+		{{ with .Site.Params.about.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+	</header>
+	{{ with .Site.Params.about.content }}<p>{{ . | markdownify }}</p>{{ end }}
+  {{ with .Site.Params.about.image }}<article class="12u$(xsmall) work-item">
+    <a href="{{ $.Site.BaseURL }}images/{{ .img }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .img }}" alt="" /></a>
+    <h3>{{ .title | markdownify }}</h3>
+    <p>{{ .description | markdownify }}</p>
+  </article>{{ end }}
+</section>

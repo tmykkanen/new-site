@@ -1,0 +1,17 @@
+{{ define "main" }}
+	<span>
+		<h1>{{ .Title }}</h1>
+
+		{{ partial "post-meta" . }}
+	</span>
+
+	<p>
+	    {{ .Content }}
+	</p>
+
+  {{ if isset .Params "gallery"}}
+      {{ partial "gallery" . }}
+  {{ end }}
+
+	{{ template "_internal/disqus.html" . }}
+{{ end }}
